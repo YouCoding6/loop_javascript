@@ -31,7 +31,7 @@ const compare = (a, b) => {
 
 console.log(books.sort(compare))
 
-const books_borrow_at_least_once = (array) => {
+const books_rented_at_least_once = (array) => {
     var rent = 0
     for (let index = 0; index < array.length; index++) {
         if (array[index].rented != 0) {
@@ -44,7 +44,7 @@ const books_borrow_at_least_once = (array) => {
         console.log("Oui")
 }
 
-books_borrow_at_least_once(books)
+books_rented_at_least_once(books)
 
 const book_more_rented = (array) => {
     var max = 0

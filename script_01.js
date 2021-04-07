@@ -27,26 +27,36 @@ const entrepreneurs_filtred = array => {
 
     for (let index = 0; index < array.length; index++) {
 
-        console.log(`firstName: ${array[index].first}, lastName: ${array[index].last}, age: ${date - array[index].year}`);
+        console.log(`firstName: ${array[index].first}, lastName: ${array[index].last}`);
     }
-
 }
 
 
-// entrepreneurs_filtred(entrepreneurs)
+entrepreneurs_filtred(entrepreneurs)
 
+/////////////////////////////////////////////////////////////////////////
 
-const entrepreneurs_filtred_age = array => {
+const entrepreneurs_age = array => {
+
+    const date = new Date().getFullYear();
+
+    for (let index = 0; index < array.length; index++) {
+        console.log(`firstName: ${array[index].first}, lastName: ${array[index].last}, age: ${date - array[index].year}`);
+    }
+}
+
+entrepreneurs_age(entrepreneurs)
+
+/////////////////////////////////////////////////////////////////////////
+
+const entrepreneurs_filtred_by_age = array => {
 
     for (let index = 0; index < array.length; index++) {
         if (array[index].year > 1970 && array[index].year < 1979)
             console.log(array[index]);
-
-
     }
-
 }
 
-entrepreneurs_filtred_age(entrepreneurs)
+entrepreneurs_filtred_by_age(entrepreneurs)
 
 
